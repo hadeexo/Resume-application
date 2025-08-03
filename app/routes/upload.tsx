@@ -4,7 +4,6 @@ import {useNavigate} from "react-router";
 import FileUploader from "~/components/FileUploader";
 import { usePuterStore } from "../../lib/puter";
 import { generateUUID } from "../../lib/utils";
-import * as path from "node:path";
 import { prepareInstructions } from "../../constants";
 
 const upload = () => {
@@ -57,7 +56,7 @@ const upload = () => {
       dat.feedback = JSON.parse(feedbackText);
       await kv.set (`resume:${uuid}`, JSON.stringify(data));
       setStatusText('Analysis complete, redirecting...');
-      console.log(data);
+      navigate(`/resume/${uuid});`);
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
