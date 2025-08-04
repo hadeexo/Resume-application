@@ -6,6 +6,8 @@ import Summary from "~/components/Summary";
 import Ats from "~/components/ATS";
 import Details from "~/components/Details";
 
+
+
 export const meta = () => ([
   {title: 'Resume-gpt | Review'},
   {name: 'description', content: 'Detailed overview of your resume'}
